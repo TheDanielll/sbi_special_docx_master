@@ -33,6 +33,7 @@ setup(
     ],
     include_package_data=True,
     description="A project for adding an information block to an MS .docx file",
+    readme = "README.md",  # long_description
     author="Danila Aleksandrov",
     author_email="danila.alexandrov24@gmail.com",
     python_requires='>=3.10',
