@@ -2,7 +2,7 @@
 
 This project was created to add additional information, specified in a certain format, to existing .docx files. 
 
-[![Documentation](https://future_link)](https://future_link.com/docs) [![GitHub](https://future_link)](https://future_link.com/example)
+[![Documentation](https://future_link)](https://future_link.com/docs)
 
 ## Example
 

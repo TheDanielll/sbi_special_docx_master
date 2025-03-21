@@ -1,31 +1,31 @@
-Зміст
+Content
 =================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Зміст
+   :caption: Content
 
 **************************
-ПОСІБНИК
+MANUAL
 **************************
 
 .. toctree::
    :maxdepth: 2
-   :caption: Опис користування
+   :caption: Description of use
 
    posts/README.rst
 
 **************************
-ДОКУМЕНТАЦІЯ КОДУ
+Code documentation
 **************************
 
 .. toctree::
    :maxdepth: 4
-   :caption: Первинний код
+   :caption: Primary code
 
    posts/spec_part.rst
 
-Індекси модулів
+Index modules
 ====================
 
 * :ref:`genindex`
