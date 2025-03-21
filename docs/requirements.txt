@@ -1,5 +1,4 @@
-
-sphinx==8.2.3
+sphinx==7.2.6
 sphinx-rtd-theme==2.0.0
 sphinx-automodapi==0.13
 numpydoc==1.6.0
