@@ -51,7 +51,7 @@ toggleprompt_offset_right = 35
 # - автоматично збирає інформацію про класи, функції та методи, що містяться в цьому модулі
 extensions.append('sphinx_automodapi.automodapi')
 # - допомагає коректно розрізняти об'єкти з однаковими іменами, такі як методи класу та функції
-extensions.append('sphinx_automodapi.smart_resolver')
+# extensions.append('sphinx_automodapi.smart_resolver')
 # - чи слід показувати члени класу в документації:
 numpydoc_show_class_members = False
 
