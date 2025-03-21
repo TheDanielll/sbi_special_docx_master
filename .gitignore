@@ -167,5 +167,3 @@ cython_debug/
 *.docx
 *.doc
 *.env
-
-/docs/source/_templates
