@@ -2,7 +2,7 @@
 
 This project was created to add additional information, specified in a certain format, to existing .docx files. 
 
-[![Documentation](https://sbi-special-docx-master.readthedocs.io/en/latest/)](https://sbi-special-docx-master.readthedocs.io/en/latest/)
+[![Documentation](https://img.shields.io/badge/Documentation-Read%20The%20Docs-blue.svg)](https://sbi-special-docx-master.readthedocs.io/en/latest/)
 
 ## Example
 
