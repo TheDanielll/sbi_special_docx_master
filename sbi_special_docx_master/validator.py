@@ -29,7 +29,7 @@ class UnvalidatedItemModel(BaseModel):
         extra = "allow"  # Allow any additional keys beyond those explicitly defined
 
     @field_validator('title', 'content', mode='before')
-    def convert_to_str(self, value):
+    def convert_to_str(cls, value):
         """
         Validator for 'title' and 'content' fields.
         - If the value is None, it is returned unchanged.
@@ -52,7 +52,7 @@ class UnvalidatedItemModel(BaseModel):
         return value
 
     @field_validator('images', mode='before')
-    def filter_images(self, v):
+    def filter_images(cls, v):
         """
         Validator for the 'images' field.
         - If the input value is not a list, returns an empty list (indicating no images).
