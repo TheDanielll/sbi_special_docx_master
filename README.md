@@ -2,7 +2,7 @@
 
 This project was created to add additional information, specified in a certain format, to existing .docx files. 
 
-[![Documentation](https://future_link)](https://future_link.com/docs)
+[![Documentation](https://sbi-special-docx-master.readthedocs.io/en/latest/)](https://sbi-special-docx-master.readthedocs.io/en/latest/)
 
 ## Example
 
