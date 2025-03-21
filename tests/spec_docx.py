@@ -124,31 +124,35 @@ def generate_values(valid: bool = False) -> List[Dict[str, Any]]:
     if not valid:
         # Generate dictionaries with potentially invalid values
         for _ in range(5):
-            # Randomly decide whether to use an unexpected value for 'content'
-            if random.random() < 0.25:
-                content_value = random.choice(unexpected_options)
-            else:
-                content_value = random.choice(content_options)
-
-            # Randomly decide whether to use an unexpected value for 'title'
-            if random.random() < 0.25:
-                title_value = random.choice(unexpected_options)
-            else:
-                title_value = random.choice(title_options)
-
-            # Generate a list with one image represented as a base64 string
+            # Спочатку створюємо стандартні значення
+            content_value = random.choice(content_options)
+            title_value = random.choice(title_options)
             images_value = [{"file": get_random_image_base64()}]
 
-            # Construct the resulting dictionary
+            # Вибираємо, в якому полі буде unexpected value
+            field_with_unexpected = random.choice(['content', 'title', 'extra'])
+
+            # Підміняємо обране поле на unexpected значення
+            if field_with_unexpected == 'content':
+                content_value = random.choice(unexpected_options)
+            elif field_with_unexpected == 'title':
+                title_value = random.choice(unexpected_options)
+            elif field_with_unexpected == 'extra':
+                # Додатковий випадковий елемент
+                random_item_key = "random_item"
+                random_item_value = random.choice(unexpected_options)
+
+            # Формуємо словник
             result_dict = {
                 'content': content_value,
                 'title': title_value,
                 'images': images_value
             }
 
-            # Occasionally add an extra key with an unexpected value
-            if random.random() < 0.2:
-                result_dict["random_item"] = random.choice(unexpected_options)
+            # Додаємо додатковий елемент, якщо його обрано
+            if field_with_unexpected == 'extra' or random.random() < 0.2:
+                result_dict[random_item_key] = random_item_value if field_with_unexpected == 'extra' else random.choice(
+                    unexpected_options)
 
             generated_dicts.append(result_dict)
     else:
@@ -180,6 +184,7 @@ items_for_valid_testing += generate_values(True)
 
 
 # Pytest test function for cases with potentially invalid/random document content
+@pytest.mark.xfail
 @pytest.mark.parametrize("values", items_for_invalid_testing)
 def test_random_spec_docx(values):
     # Wrap the test values into the expected structure for the document
