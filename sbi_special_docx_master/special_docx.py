@@ -96,7 +96,7 @@ class AddDocx:
         doc.add_paragraph(SBIDOCX_BLOCKNAME, style="left_header")
         for item in info:
             # Add a paragraph for the title with a bullet style.
-            title_paragraph = doc.add_paragraph(style='List Bullet')
+            title_paragraph = doc.add_paragraph(style='text_base')
             run = title_paragraph.add_run(item['title'])
             run.bold = True  # Make the title bold
 
