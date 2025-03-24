@@ -22,7 +22,7 @@ setup(
     ],
     extras_require={
         'dev_deps ': [
-            'pytest',
+            'pytest'
         ]
     },
     classifiers=[

@@ -1,13 +1,31 @@
-## About
+[![Documentation](https://img.shields.io/badge/Documentation-Read%20The%20Docs-blue.svg)](https://sbi-special-docx-master.readthedocs.io/en/latest/)
+
+# About
 
 This project was created to add additional information, specified in a certain format, to existing .docx files. 
 
-[![Documentation](https://img.shields.io/badge/Documentation-Read%20The%20Docs-blue.svg)](https://sbi-special-docx-master.readthedocs.io/en/latest/)
+## Features
 
-## Example
+- **DOCX Processing:** Automates the editing and formatting of DOCX documents.
+- **Flexible Configuration:** Easily customize processing parameters to suit your specific needs.
+- **Seamless Integration:** Integrates smoothly with other services and workflows thanks to its open architecture.
+- **Extensibility:** A clear and modular code structure allows you to add new features or modify existing ones with ease.
 
-![Example Image](/docs/source/_static/example.jpg) 
+## Table of Contents
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Example](#Example)
+- [License](#LICENSE)
 
+## Installation
+
+The project is available on the Python Package Index (PyPI), making installation simple and straightforward. To install, run:
+
+```bash
+    pip install sbi-special-docx-master
+``` 
+
+## Usage
 ```python
 # Import the AddDocx class from the sbi_special_docx_master module
 from sbi_special_docx_master import AddDocx
@@ -61,3 +79,12 @@ doc_ex = spec.document
 
 # Check whether the addition operation was successful.
 doc_suc = spec.has_succeeded
+```
+
+## Example
+
+![Example Image](/docs/source/_static/example.jpg)
+
+## License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
