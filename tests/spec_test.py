@@ -98,8 +98,7 @@ def generate_values(valid: bool = False) -> List[Dict[str, Any]]:
 
     # Options for unexpected or invalid values (including various data types)
     unexpected_options = [
-        None,
-        True,
+        False,
         [],
         [1, 2, 3],
         {},
@@ -132,6 +131,8 @@ def generate_values(valid: bool = False) -> List[Dict[str, Any]]:
                 content_value = random.choice(unexpected_options)
             elif field_with_unexpected == 'title':
                 title_value = random.choice(unexpected_options)
+            elif field_with_unexpected == 'image':
+                images_value = [{"file": random.choice(unexpected_options)}]
             elif field_with_unexpected == 'extra':
                 # Додатковий випадковий елемент
                 random_item_key = "random_item"
