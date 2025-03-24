@@ -11,6 +11,7 @@ from PIL import Image
 
 from .logger import logger
 from .validator import validate_data_pydantic
+from .styles import DocEditorEmpty
 
 # Set the default image height in inches, configurable via environment variable.
 SBIDOCX_PICHEIGHT = float(os.environ.get("SBIDOCX_PICHEIGHT", 2.5))
@@ -90,6 +91,7 @@ class AddDocx:
 
         # Clone the original document to attempt modifications without affecting the original.
         doc = copy.deepcopy(self._orig_doc)
+        doc = DocEditorEmpty(doc).document
         # Add the block header using the configured block name.
         doc.add_paragraph(SBIDOCX_BLOCKNAME, style="left_header")
         for item in info:
