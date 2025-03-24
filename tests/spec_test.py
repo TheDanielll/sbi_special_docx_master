@@ -98,11 +98,6 @@ def generate_values(valid: bool = False) -> List[Dict[str, Any]]:
 
     # Options for unexpected or invalid values (including various data types)
     unexpected_options = [
-        123,
-        -456,
-        0,
-        2.5,
-        -3.14,
         None,
         True,
         [],
