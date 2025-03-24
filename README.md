@@ -52,3 +52,12 @@ spec = AddDocx(doc, info_dict)
 
 # Save the modified document to a new file
 spec.save('my_file.docx')
+
+# Optionally, call the method to save the document content to an IO stream.
+add.save_io()
+
+# Retrieve the modified document from the AddDocx object.
+doc_ex = add.document
+
+# Check whether the addition operation was successful.
+doc_suc = add.has_succeeded

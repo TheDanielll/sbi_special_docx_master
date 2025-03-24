@@ -192,7 +192,7 @@ def test_random_spec_docx(values):
     doc = Document()  # Create a new DOCX document
     add = AddDocx(doc, sep_inf)  # Process the document with AddDocx
     add.save_io()
-    doc_ex = add.get_document
+    doc_ex = add.document
     assert isinstance(doc_ex, DocxDocument), "The value is not a valid DocxDocument instance."
 
 
@@ -203,5 +203,5 @@ def test_valid_spec_docx(values):
     doc = Document()  # Create a new DOCX document
     add = AddDocx(doc, sep_inf)  # Process the document with AddDocx
     add.save_io()
-    doc_ex = add.get_document
+    doc_ex = add.document
     assert isinstance(doc_ex, DocxDocument), "The value is not a valid DocxDocument instance."

@@ -63,7 +63,7 @@ class AddDocx:
             logger.error(f"Error {e} while adding information block")
 
     @property
-    def get_document(self) -> DocxDocument:
+    def document(self) -> DocxDocument:
         """
         Returns the document instance with the required modifications,
         or the original document if the modified version could not be generated.
