@@ -1,10 +1,33 @@
 Project for Adding Data to DOCX
 =================================
 
-Description
------------
+About
+-----
 
 This project is designed to add information to an existing `.docx` document. The data is provided in the form of a dictionary and is then inserted into the document using the `sbi_special_docx_master` module along with the `python-docx` library. A predefined data structure is used during the process.
+
+Features
+--------
+
+- **DOCX Processing:** Automates the editing and formatting of DOCX documents.
+- **Flexible Configuration:** Easily customize processing parameters to suit your specific needs.
+- **Seamless Integration:** Integrates smoothly with other services and workflows thanks to its open architecture.
+- **Extensibility:** A clear and modular code structure allows you to add new features or modify existing ones with ease.
+
+Table of Contents
+-----------------
+
+- `Installation`_
+- `Usage`_
+- `Main Components`_
+
+Installation
+------------
+
+The project is available on the Python Package Index (PyPI), making installation simple and straightforward. To install, run::
+
+   pip install sbi-special-docx-master
+
 
 Main Components
 ---------------
@@ -93,4 +116,5 @@ Check whether the addition operation was successful:
 .. code-block:: python
 
     doc_suc = spec.has_succeeded
+
 
