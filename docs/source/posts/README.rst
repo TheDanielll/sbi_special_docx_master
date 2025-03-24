@@ -24,9 +24,12 @@ Table of Contents
 Installation
 ------------
 
-The project is available on the Python Package Index (PyPI), making installation simple and straightforward. To install, run::
+The project is available on the Python Package Index (PyPI), making installation simple and straightforward.
+To install, run:
 
-   pip install sbi-special-docx-master
+.. code-block:: python
+
+    pip install sbi-special-docx-master
 
 
 Main Components
