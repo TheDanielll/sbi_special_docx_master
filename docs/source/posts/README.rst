@@ -79,4 +79,18 @@ Retrieving the document object:
 
 .. code-block:: python
 
-    doc = spec.get_document
+    doc = spec.document
+
+Generating a bytes stream of the document:
+
+.. code-block:: python
+
+    io_doc = spec.save_io()
+
+
+Check whether the addition operation was successful:
+
+.. code-block:: python
+
+    doc_suc = spec.has_succeeded
+
