@@ -146,7 +146,7 @@ def generate_values(valid: bool = False) -> List[Dict[str, Any]]:
             }
 
             # Додаємо додатковий елемент, якщо його обрано
-            if field_with_unexpected == 'extra' or random.random() < 0.2:
+            if field_with_unexpected == 'extra':
                 result_dict[random_item_key] = random_item_value if field_with_unexpected == 'extra' else random.choice(
                     unexpected_options)
 
