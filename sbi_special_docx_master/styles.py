@@ -84,9 +84,11 @@ class DocEditorEmpty:
             text_base.paragraph_format.first_line_indent = Cm(1.25)
             text_base.paragraph_format.line_spacing = 1
 
-        if 'List Bullet' not in [s.name for s in self.styles]:
-            # Modify default unordered list style (List Bullet)
+        if 'List Bullet' in [s.name for s in self.styles]:
             list_style = self.styles['List Bullet']
+        else:
+            list_style = self.styles.add_style('List Bullet', WD_STYLE_TYPE.PARAGRAPH)
+            # Modify default unordered list style (List Bullet)
             list_style.font.name = 'Times New Roman'
             list_style.font.size = Pt(14)
             list_style.paragraph_format.space_before = Pt(0)
@@ -104,9 +106,11 @@ class DocEditorEmpty:
             text_red.font.size = Pt(14)
             text_red.font.color.rgb = RGBColor(255, 0, 0)
 
-        if 'List Bullet 2' not in [s.name for s in self.styles]:
-            # Modify second-level bullet list style (List Bullet 2)
+        if 'List Bullet 2' in [s.name for s in self.styles]:
             list_style = self.styles['List Bullet 2']
+        else:
+            list_style = self.styles.add_style('List Bullet 2', WD_STYLE_TYPE.PARAGRAPH)
+            # Modify second-level bullet list style (List Bullet 2)
             list_style.font.name = 'Times New Roman'
             list_style.font.size = Pt(14)
             list_style.paragraph_format.space_before = Pt(1.25)
@@ -116,7 +120,10 @@ class DocEditorEmpty:
             list_style.paragraph_format.left_indent = Cm(0.0)
             list_style.paragraph_format.line_spacing = 1
 
-        if 'Table Grid' not in [s.name for s in self.styles]:
+        if 'Table Grid' in [s.name for s in self.styles]:
+            tab_style = self.styles['Table Grid']
+        else:
+            tab_style = self.styles.add_style('Table Grid', WD_STYLE_TYPE.PARAGRAPH)
             # Modify table grid style for smaller font size
             tab_style = self.styles['Table Grid']
             tab_style.font.name = 'Times New Roman'
@@ -146,7 +153,10 @@ class DocEditorEmpty:
             first_base.paragraph_format.first_line_indent = Cm(0)
             first_base.paragraph_format.line_spacing = 1
 
-        if 'List' not in [s.name for s in self.styles]:
+        if 'List' in [s.name for s in self.styles]:
+            list_style = self.styles['List']
+        else:
+            list_style = self.styles.add_style('List', WD_STYLE_TYPE.PARAGRAPH)
             # Modify generic list style
             list_style = self.styles['List']
             list_style.font.name = 'Times New Roman'
